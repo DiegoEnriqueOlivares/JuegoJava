@@ -22,14 +22,8 @@ public class JuegoOpeTern {
         op1 = datos();
         op2 = datos();
 
-
-        if (op1 < 1 || op1 > 5 ){
-            JOptionPane.showMessageDialog(null, "Jugador #1 introdujo una opcion equivocada");
-        } else if (op2 < 1 || op2 > 5) {
-            JOptionPane.showMessageDialog(null, "Jugador #2 introdujo una opcion equivocada");
-        } else {
-            //
-            String res = (op1==1 || op2==1) ? (op1==1 && op2==3) ? " Jugador #1 escogio Piedra" +
+            String res = (op1 < 1 || op1 > 5 ) ? "Jugador #1 introdujo una opcion equivocada" :
+                    (op2 < 1 || op2 > 5) ? "Jugador #2 introdujo una opcion equivocada" : (op1==1 || op2==1) ? (op1==1 && op2==3) ? " Jugador #1 escogio Piedra" +
                     "\nJugador #2 escogio Tijeras"+
                     "\nGanador Jugador #1"+
                     "\nPiedra aplasta a Tijeras" : (op1==1 && op2==4) ? " Jugador #1 escogio Piedra" +
@@ -91,6 +85,6 @@ public class JuegoOpeTern {
                     "\nGanador Jugador #2"+
                     "\nSpock vaporiza Piedra" : null : null : null : null : null : null ;
             JOptionPane.showMessageDialog(null, res);
-        }
+
     }
 }
